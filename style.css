@@ -95,3 +95,38 @@ header {
 main > .item:nth-child(odd) {
   color: rgb(234, 228, 240);
 }
+/* for ipad */
+@media (768px <= width <=1024 px) {
+  .wrapper {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "h1 h1"
+      "header header"
+      "banner banner"
+      "sidebox1 main"
+      "sb2 main"
+      "recents main"
+      "footer footer";
+  }
+}
+
+/* for mobile
+ */
+@media (0<= width <=768px) {
+  .wrapper {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "h1"
+      "header"
+      "banner"
+      "sidebox1"
+      "sb2"
+      "sm"
+      "main"
+      "tags"
+      "recents"
+      "footer";
+  }
+}
