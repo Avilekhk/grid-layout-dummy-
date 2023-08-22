@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  /* height: 100vh; */
+  /* vh means veiw height or full view of the page */
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas:
+    "h1 h1 h1"
+    "header header header"
+    "banner banner sb1"
+    "banner banner sb2"
+    "sm main main"
+    "tags main main"
+    "recents main main"
+    "footer footer footer";
+}
+h1 {
+  grid-area: h1;
+  background-color: rgb(73, 164, 245);
+  /* height: 200px; */
+  padding: 1rem;
+}
+
+header {
+  background-color: rgb(231, 148, 39);
+  padding: 0.8rem;
+
+  grid-area: header;
+}
+.banner {
+  background-color: rgb(47, 38, 222);
+  grid-area: banner;
+}
+
+.side-box1 {
+  background-color: rgb(27, 243, 243);
+  grid-area: sb1;
+}
+
+.side-box2 {
+  background-color: rgb(226, 22, 22);
+  grid-area: sb2;
+}
+.side-menu {
+  background-color: navy;
+  grid-area: sm;
+}
+.tags {
+  background-color: yellow;
+  grid-area: tags;
+}
+.recents {
+  background-color: yellowgreen;
+  grid-area: recents;
+}
+.main {
+  grid-area: main;
+  background-color: orange;
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(15, 15, 237);
+  padding: 2rem;
+  display: flex;
+}
+
+.left,
+.right,
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  flex: 2;
+}
+.item {
+  padding: 2rem;
+  border: 2px solid rgb(227, 17, 17);
+}
+
+main > .item:nth-child(odd) {
+  color: rgb(234, 228, 240);
+}
